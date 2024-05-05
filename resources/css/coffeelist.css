@@ -1,0 +1,371 @@
+/*Components*/
+@import "/resources/css/components/favorites.css";
+
+/*Common*/
+@import "/resources/css/common.css";
+
+/*Screens*/
+
+#coffeelist {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+.coffeelist-column_1{
+    flex: 1;
+    width: 80%;
+    transition: width 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.coffeelist-column_2{
+    margin-top: 5%;
+    padding-bottom: 15px;
+    width: auto;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 30px;
+    position: absolute;
+    right: 15px;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    animation: showComponent 0.5s ease linear;
+}
+
+/*first column*/
+.coffeelist-column__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.coffeelist-title {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: var(--ccm-font);
+}
+
+.coffeelist-searchbox{
+    margin: 15px;
+    width: 300px;
+    height: 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coffeelist-searchbox__select{
+    border: none;
+    height: 32px;
+    width: 70px;
+    padding-left: 5px;
+    border-radius: 16px;
+    background-color: var(--ccm-color1);
+    color: white;
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    margin: 0;
+}
+.coffeelist-searchbox__input{
+    margin: 0;
+    height: 32px;
+    width: 280px;
+    border-radius: 16px;
+    padding: 0 0 0 80px;
+    border: none;
+    box-shadow: 3px 5px 8px -1px #9E9E9E;
+}
+.coffeelist-searchbox__btn{
+    background-color: var(--ccm-color1);
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    border-radius:16px;
+    color: white;
+    position: absolute;
+    right: -30px;
+    top: 0px;
+}
+.coffeelist-searchbox__btn:hover{
+    animation: beat 0.2s linear;
+}
+
+
+
+.coffee-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 540px;
+    max-width: 950px;
+    min-width: 580px;
+    position: relative;
+}
+.coffeelist-add{
+    position: absolute;
+    left: -50%;
+    width: 90px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: var(--ccm-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 5px 8px -1px #9E9E9E;
+}
+.coffeelist-add a{
+    font-family: var(--ccm-font);
+    font-size: 13px;
+    color: white;
+}
+.coffeelist-add:hover{
+    animation: beat 0.2s linear;
+}
+.coffeelist-container{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.coffeelist-item {
+    margin: 10px;
+    width: 130px;
+    height: 160px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--ccm-color2);
+    box-shadow: 3px 5px 8px -1px #9E9E9E;
+}
+.coffeelist-item__img{
+    display: block;
+    margin-top: 10px;
+    height: 90px;
+    width: 80px;
+}
+.coffeelist-item__name{
+    font-size: 15px;
+    font-weight: 600;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.coffeelist-item__name a{
+    color: black;
+}
+.coffeelist-item__info{
+    font-size: 10px;
+    color: black;
+    font-family: var(--ccm-font);
+}
+.coffeelist-item__btn-area{
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 100%;
+}
+.coffeelist-item__fav{
+    height: 20px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+.fa-plus{
+    font-weight: 800;
+    font-size: 10px;
+}
+.coffeelist-item__fav:hover{
+    background-color: var(--ccm-color2);
+    color: black;
+}
+.coffeelist-item__modify-btn{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}
+.coffeelist-item__modify-btn button{
+    background-color: transparent;
+    border: none;
+}
+.coffeelist-item__modify-btn button:hover{
+    animation: beat 0.2s linear;
+}
+.fa-wrench{
+    font-size: 15px;
+}
+.coffeelist-item__delete-btn{
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+}
+.coffeelist-item__delete-btn:hover{
+    animation: beat 0.2s linear;
+}
+.fa-trash{
+    font-size: 15px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination-a {
+    color: black;
+}
+
+
+
+/*second coloumn*/
+.coffeelist-column_2__title{
+    height: 70px;
+    color: white;
+}
+.coffeelist-column_2__togle-fav-del{
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 11px;
+    height: 22px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.favbox{
+    height: auto;
+    overflow-y: auto;
+    width: 120px;
+}
+.favbox::-webkit-scrollbar {
+    width: 0;
+}
+.fp-item{
+    width: 110px;
+    height: 130px;
+}
+.fp-item__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+}
+.fp-boxes{
+    flex-direction: column;
+}
+
+
+/*third column*/
+.coffeelist-column_3{
+    display: block;
+    height: 100%;
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coffeelist-column_3 i{
+    color: black;
+    font-size: 30px;
+}
+
+
+
+/*모달 관련*/
+/* 모달 바깥 백그라운드 */
+.coffeelist-modal {
+    display: none; 
+    position: fixed; /* 모달이 전체 화면을 가리도록 변경 */
+    z-index: 20; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/*캔슬,Ok 버튼*/
+.coffeelist-modalcancelbtn, .coffeelist-modalOkbtn {
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9; /*투명도*/
+	float: left;
+	width: 50%;
+}
+
+.coffeelist-modalcancelbtn:hover, .coffeelist-modalOkbtn:hover{
+	opacity: 1.0;
+}
+
+.ccoffeelist-modalcancelbtn {
+	background-color: #EF6C33;
+	color: black;
+}
+/* 델리트 버튼 */
+.coffeelist-modalOkbtn {
+	background-color: #EF6C33;
+}	
+/* 텍스트 중앙 정렬, 패딩 */
+.coffeelist-modalcontainer {
+	padding: 16px;
+	text-align: center;
+}
+/* 모달 컨텐츠 박스 */
+.coffeelist-modalcontent {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; 
+	border: 1px solid #888;
+	width: 80%; 
+}
+/* 모달 X 버튼 */
+.coffeelist-modalclosebtn {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+}
+/* 모달 close 버튼: 마우스 올렸을 때, 포커스 됐을 때 hover*/
+.coffeelist-modalclosebtn:hover,
+.coffeelist-modalclosebtn:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+/* 플로트 속성 초기화 */
+.coffeelist-modalclearfix::after {
+  content: ""; 
+  clear: both; 
+  display: table;
+}

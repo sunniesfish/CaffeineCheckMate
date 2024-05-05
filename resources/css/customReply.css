@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/*댓글 모달 */
+.modal-content {
+    overflow-y: auto;
+    max-height: 60vh;
+    position: relative;
+    padding: 0;
+}
+
+ .reply-input-container {
+      position: fixed;
+      top: 21.2%-1px; /* 모달 내부 상단에 고정 */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(255, 255, 255);
+      width: 40%;
+  }
+  
+/*입력 테이블*/
+  .input_table{
+  	width: 10vw;
+  	height: 8vh;
+  }
+  
+/*댓글 수정 모달 */
+.update-modal-content {
+      position: fixed;
+      top: 21.2%-1px; /* 모달 내부 상단에 고정 */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(255, 255, 255);
+      padding: 0px;
+      width: 40%;
+}
+
+
+
+/*입력 및 수정 입력 창*/
+.form-control{
+	width: 350px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	margin-right: 10px
+}
+
+/*입력 및 수정버튼*/
+.replybtn{
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	
+}
+
+.reply_bnt{
+	font-family: 'yg-jalnan', sans-serif;
+	font-size: .8em;
+	color: white;
+	width: 10%;
+	height: 5%;
+	border: 0;	
+	border-radius: 3px;
+	background: rgb(12, 74, 96);
+	margin: 1%;
+}
+
+#replyList{
+	margin-top: 5%;
+}
+.modal-content::-webkit-scrollbar {
+    width: 0px;
+}
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>memoPro</display-name>
+
+<listener>
+	<listener-class>jdbc.DBCPInitListener</listener-class>
+</listener>
+<welcome-file-list>
+      <welcome-file>/WEB-INF/config/main.jsp</welcome-file>
+      <welcome-file>/webapp/views/screens/test2.jsp</welcome-file>
+   </welcome-file-list>
+<context-param>
+	<param-name>poolConfig</param-name>
+	<param-value>
+		jdbcdriver=com.mysql.cj.jdbc.Driver<!-- connector j 8버전 이후부터는 중간에 cj가 들어감 -->
+		jdbcUrl=jdbc:mysql://localhost:3306/ccm?characterEncoding=utf8<!-- db포트번호, 스키마이름 -->
+		dbUser=root<!-- 아이디 -->
+		dbPass=1234<!-- 비번 -->
+		validationQuery=select 1
+		minIdle=3
+		maxTotal=30
+		poolName=ccm<!-- 풀이름 -->
+	</param-value>
+</context-param>
+</web-app>
